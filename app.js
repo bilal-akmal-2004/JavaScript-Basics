@@ -18,7 +18,7 @@ let lessThanThreeFunction = (num) => {
 };
 
 // displaying the filter
-console.log(myFilter(arrayOfNumbers, lessThanThreeFunction));
+// console.log(myFilter(arrayOfNumbers, lessThanThreeFunction));
 
 // now here wil recreate the MAP utility
 function myMap(arr, callback) {
@@ -30,10 +30,10 @@ function myMap(arr, callback) {
   return result;
 }
 
-console.log(
-  "Mapp result: ",
-  myMap(arrayOfNumbers, (num) => num * 2),
-);
+// console.log(
+//   "Mapp result: ",
+//   myMap(arrayOfNumbers, (num) => num * 2),
+// );
 
 // here is the reduce utility
 function myReduce(arr, callback, initialValue) {
@@ -43,7 +43,25 @@ function myReduce(arr, callback, initialValue) {
   }
   return accumulator;
 }
-console.log(
-  "reduce here: ",
-  myReduce(arrayOfNumbers, (acc, num) => acc + num, 0),
-);
+// console.log(
+//   "reduce here: ",
+//   myReduce(arrayOfNumbers, (acc, num) => acc + num, 0),
+// );
+
+// object for the bank accoutn
+let person = {
+  name: "Bilal Akmal",
+  money: 2000,
+
+  widrawMoney: function (amountToWidraw) {
+    if (this.money < amountToWidraw) {
+      console.log("Insufficient Balance.");
+      return;
+    }
+    this.money = this.money - amountToWidraw;
+
+    console.log("Amount Transfered Succesfully.", this.money);
+  },
+};
+person.widrawMoney(200);
+console.log(person.money);

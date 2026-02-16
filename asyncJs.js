@@ -97,21 +97,21 @@ const { use } = require("react");
 
 // now we can add that "debounceCall" and attach it to some event
 
-// 6. running the concurrent api at once
-//for that we will use he promise.all
+// // 6. running the concurrent api at once
+// //for that we will use he promise.all
 
-async function concurrentRequests() {
-  try {
-    let results = await Promise.all([
-      fetch("https://some req 01"),
-      fetch("https://some req 02"),
-      fetch("https://some req 03"),
-    ]);
+// async function concurrentRequests() {
+//   try {
+//     let results = await Promise.all([
+//       fetch("https://some req 01"),
+//       fetch("https://some req 02"),
+//       fetch("https://some req 03"),
+//     ]);
 
-    //shwoign result here and returnging it
-    console.log(results);
-    return results;
-  } catch (error) {
-    console.log("Error happened.");
-  }
-}
+//     //shwoign result here and returnging it
+//     console.log(results);
+//     return results;
+//   } catch (error) {
+//     console.log("Error happened.");
+//   }
+// }

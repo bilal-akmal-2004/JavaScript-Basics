@@ -145,3 +145,21 @@ console.log(getTotal());
 function clearCart() {
   cart = [];
 }
+
+let batman = {
+  health: 100,
+  car: 1,
+  bike: 1,
+};
+let { health, car } = batman;
+console.log("Batman: ", health);
+
+let villains = ["Joker", "Bane"];
+let [villain01, villian2] = villains;
+console.log("Villains: ", villian2);
+
+// spread operator
+
+villains = { ...batman, batman };
+
+console.log("Spread operator: ", villains);
